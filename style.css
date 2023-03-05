@@ -1,0 +1,35 @@
+*{
+    background-color: lightskyblue;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-size: 100px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#btnClick{
+    background-color: black;
+    color: white;
+    padding: 10px 10px 10px 10px;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    position: absolute;
+    top: 50%;
+    left:50%
+}
+
+#btnClick:hover{
+    background-color: hotpink;
+}
+
+#mainSet{
+    padding-top: 50px;
+}
+

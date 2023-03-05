@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css">
+
+    <title>Catch me if you can!</title>
+</head>
+
+
+<body onload="Init()">
+    
+    <div id="mainSet">
+        <h1> Catch me if you can!</h1>
+        <button id="btnClick" onclick="stopMoving()"> Hi There! </button>
+    </div>  
+
+</body>
+
+<script>
+
+var button = document.getElementById("btnClick");
+var moveInterval;
+
+    // Start moving the button when the page loads
+    startMoving();
+
+    // Start moving the button randomly
+    function startMoving() {
+      moveInterval = setInterval(moveButton, 500);
+    }
+
+    // Stop moving the button
+    function stopMoving() {
+      clearInterval(moveInterval);
+      alert('You caught me!');
+    }
+
+    // Move the button randomly
+    function moveButton() {
+      var windowHeight = window.innerHeight;
+      var windowWidth = window.innerWidth;
+      var newTop = Math.floor(Math.random() * (windowHeight - button.offsetHeight));
+      var newLeft = Math.floor(Math.random() * (windowWidth - button.offsetWidth));
+      button.style.top = newTop + "px";
+      button.style.left = newLeft + "px";
+    }
+
+</script>
+</html>
